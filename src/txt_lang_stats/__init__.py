@@ -11,6 +11,7 @@ import math
 import os
 import pathlib
 import pickle
+import sys
 import time
 
 CACHE_PATH = pathlib.Path(os.environ.get("TXLST_CACHE_PATH") or "/tmp/TXLST/")
@@ -78,7 +79,7 @@ def get_language_stats(client, *, username, repo_name: str):
         data = response.read()
         return json.loads(data)
     else:
-        print(f"Response failed: {response.read()}")
+        print(f"Response failed: {response.read()}", file=sys.stderr)
 
 
 @cache_call(CACHE_PATH, 3600, ["inc_forks", "page"])
@@ -90,7 +91,7 @@ def get_repos(client, *, inc_forks: bool, page: int = 1):
         data = response.read()
         return json.loads(data)
     else:
-        print(f"Response failed: {response.read()}")
+        print(f"Response failed: {response.read()}", file=sys.stderr)
 
 
 def iterate_repos(client, inc_forks: bool, page: int = 1):
@@ -116,7 +117,7 @@ def get_stats_for(username: str, include_forks: bool, symbols: tuple | list):
         if not stats:
             continue
         counter.update(stats)
-        
+
     symbols = list(symbols)
     rest_symbol = symbols.pop()
 

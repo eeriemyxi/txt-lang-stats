@@ -20,3 +20,14 @@ TXLST_GITHUB_USERNAME=eeriemyxi TXLST_INCLUDE_FORKS=True TXLST_BLACKLIST_LANGS='
 
 Those long variables are just environment variables. You can export them
 yourself anytime before running the command.
+
+# Command-line Arguments
+```
+usage: txt-lang-stats [-h] [--insert-into INSERT_INTO]
+
+options:
+  -h, --help            show this help message and exit
+  --insert-into INSERT_INTO
+                        Looks for %STATS%, %BAR%, and %DATE% then replaces that line accordingly, finally writes the result to
+                        stdin.
+```

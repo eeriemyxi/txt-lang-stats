@@ -1,5 +1,5 @@
 # txt-lang-stats
-This tool can generate language statistics automatically for a GitHub user.
+This tool can generate language statistics automatically for a GitHub user:
 
 The output looks like this:
 
@@ -16,7 +16,7 @@ The output looks like this:
 0% [+++++-=~×&*.....] 100%
 ```
 
-_Last updated on **2025-04-09 20:32:17** with [`txt-lang-stats`](https://github.com/eeriemyxi/txt-lang-stats)_
+_Last updated on **2025-04-09 21:03:47** with [`txt-lang-stats`](https://github.com/eeriemyxi/txt-lang-stats)_
 
 See `README-TEMPLATE.md` for reference.
 
@@ -38,3 +38,4 @@ options:
                         Looks for %STATS%, %BAR%, and %DATE% then replaces that line accordingly, finally writes the result to
                         stdin.
 ```
+
